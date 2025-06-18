@@ -545,7 +545,4 @@
   }
 }
 
-/* 为medium-zoom-image类也添加圆角 */
-.medium-zoom-image {
-  border-radius: 12px !important;
-}
+
