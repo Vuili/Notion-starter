@@ -188,10 +188,11 @@
   }
   
   .notion-asset-wrapper img {
-    object-fit: contain !important; /* 改为contain确保图片完全显示 */
+    object-fit: contain !important;
     width: 100% !important;
-    height: auto !important; /* 改为auto让高度自适应 */
-    max-height: none !important; /* 移除最大高度限制 */
+    height: auto !important;
+    max-height: none !important;
+    border-radius: 12px !important; /* 添加圆角 */
   }
   
   /* 移除默认的spacer间距 */
@@ -542,4 +543,9 @@
   .notion-collection-card:active {
     transform: perspective(1000px) rotateX(3deg) rotateY(3deg) scale(0.96);
   }
+}
+
+/* 为medium-zoom-image类也添加圆角 */
+.medium-zoom-image {
+  border-radius: 12px !important;
 }
