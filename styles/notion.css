@@ -171,34 +171,20 @@
   }
   
   .notion-column {
-    flex: 1 1 calc(50% - 4px) !important;
+    flex: 1 1 calc(50% - 8px) !important;
     min-width: 0 !important;
     width: auto !important;
   }
-  
-  /* 确保图片容器保持合适的比例 */
-  .notion-asset-wrapper {
-    margin: 0 !important;
-    width: 100% !important;
+
+  .notion-block-21865784658480b9b0eade63667710fb.notion-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px !important;
   }
-  
-  .notion-asset-wrapper > div {
+
+  .notion-block-21865784658480b9b0eade63667710fb .notion-column {
     width: 100% !important;
-    height: auto !important;
-    /* 移除固定的aspect-ratio，让图片自然显示 */
-  }
-  
-  .notion-asset-wrapper img {
-    object-fit: contain !important;
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    border-radius: 12px !important; /* 添加圆角 */
-  }
-  
-  /* 移除默认的spacer间距 */
-  .notion-spacer {
-    display: none !important;
+    flex: unset !important;
   }
 }
 
@@ -473,26 +459,6 @@
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 3D卡片按压 + 悬停效果 - 纯CSS版本 */
 .notion-collection-card {
   position: relative;
@@ -545,11 +511,6 @@
   }
 }
 
-
-
-
-
-
 /* 移除默认点击效果 */
 .notion-collection-card,
 .notion-collection-card * {
@@ -577,13 +538,15 @@
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
+  padding: 5px 0px; /* 新增：减小内边距 */
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   background: #fff;
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
-  margin: 8px 0px;
+  margin: 8px 0px 0px 0px;
 }
+
 .notion-column:last-child {
   margin-bottom: 10;
 }
@@ -607,9 +570,6 @@
   background: #181a20;
 }
 
-
-
-
 .notion-page-title {
   display: flex !important;
   flex-direction: row !important;
@@ -620,16 +580,11 @@
   gap: 0.5em;
 }
 
-
-
-
-
 .notion-page-link,
 .notion-page-link * {
   text-decoration: none !important;
   border-bottom: none !important;
 }
-
 
 .notion-page-link:hover,
 .notion-page-link:focus {
@@ -641,6 +596,31 @@
   color: inherit !important;
   filter: none !important;
 }
+
+.notion-block-21865784658480b9b0eade63667710fb {
+  margin-bottom: 16px; /* 或根据需要调整间距 */
+  overflow: visible !important;
+  padding-bottom: 24px; /* 或更大，保证阴影完全显示 */
+}
+
+.notion-block-21865784658480b9b0eade63667710fb .notion-column {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: perspective(1000px) rotateX(0) rotateY(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-origin: center center;
+}
+.notion-block-21865784658480b9b0eade63667710fb .notion-column:hover {
+  transform: perspective(1000px) rotateX(-2deg) rotateY(2deg) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.notion-block-21865784658480b9b0eade63667710fb .notion-column:active {
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(0.98);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 
 
