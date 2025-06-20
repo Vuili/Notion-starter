@@ -473,6 +473,26 @@
   align-items: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 3D卡片按压 + 悬停效果 - 纯CSS版本 */
 .notion-collection-card {
   position: relative;
@@ -524,6 +544,11 @@
     margin: 0 auto;
   }
 }
+
+
+
+
+
 
 /* 移除默认点击效果 */
 .notion-collection-card,
@@ -616,3 +641,7 @@
   color: inherit !important;
   filter: none !important;
 }
+
+
+
+
