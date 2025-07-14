@@ -669,4 +669,9 @@
 
 
 
-
+.notion-collection-card {
+  background: #f7fffa; /* 浅色模式 */
+}
+.dark-mode .notion-collection-card {
+  background: #23272f; /* 深色模式 */
+}
